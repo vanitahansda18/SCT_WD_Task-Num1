@@ -1,0 +1,328 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+
+:root{
+    --primary-color:black;
+    --primary-color-dark:black;
+    --white:#ffffff;
+    --max-width:1500px;
+}
+
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+img{
+    display:flex;
+    width:100%;
+}
+a{
+    text-decoration:none;
+    transition:0.9s;
+
+}
+
+#menu-btn{
+    color:white;
+    font-size:24px;
+    cursor:pointer;
+}
+ul{
+    list-style:none;
+}
+body{
+    font-family:"Roboto",sans-serif;
+}
+.main{
+    position:relative ;
+    isolation:isolate;
+    min-height: 300vh;
+    background-image: url("assests/HD-wallpaper-world-war-z-game.jpg");
+    background-position:center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color:black;
+}
+
+.main::before{
+    position:absolute;
+    content:"";
+    inset:0;
+    opacity:1;
+    
+    z-index:999;
+    animation:main-slider 2s ease-in-out forward;
+}
+
+@keyframes main-slider{
+    90%{
+        opacity:0;
+        transform:translateX(-100%);
+    }
+}
+
+nav{
+    position:fixd;
+    isolation:isolate;
+    width:100%;
+    z-index:9;
+}
+
+.nav__header{
+    padding:.75rem 1rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content:space-between ;
+    background-color:black;
+}
+.nav__logo a img{
+    max-width: 1000px;
+}
+.nav__menu__btn{
+    font-size:1.5rem;
+    color:var(--white);
+    cursor:pointer;
+}
+.nav__links{
+    position:absolute;
+    bottom:0;
+    left: 0px;;
+    
+    width:100%;
+    display: flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+    gap:2rem;
+padding:2rem;
+background-color: black;
+transition:transform 0.5s;
+z-index:-1;
+transform: translateY(100%);
+}
+.nav__links.open{
+    color:var(--white);
+    white-space:nowrap; 
+transform: translateY(0);
+}
+.header__container{
+    max-width:var(--max-width);
+    margin:auto;
+    padding:5rem 1rem;
+}
+.header__container h1{
+    margin-bottom:2rem;
+    display: flex;
+    align-items: flex-end;
+    gap: 0 1rem;
+    flex-wrap:wrap;
+    color:var(--white);
+    font-weight: 800;
+    font-family: "  Roboto slab",sans-serif;
+}
+
+.header__container h1 span:nth-child(1){
+    font-size:6rem;
+    line-height:6rem;
+}
+.header__container h1 span:nth-child(2){
+    font-size:3rem;
+
+}
+.header__container p{
+    margin: bottom 5rem;
+    max-width:calc((var(--max-width))/2);
+    line-height:1.75rem;
+    color:var(--white);
+}
+button{
+    padding:1.5rem 3rem;
+    margin-bottom:1.5rem;
+    outline:none;
+    border:none;
+    font-size:1rem;
+    font-family:"Roboto",sans-serif;
+    color:var(--black);
+    background-color:rgb(213, 9, 9);
+    background-color: 0.2rem;
+    transition: 0.3s;
+    cursor:pointer;
+    margin-left: 1rem;
+}
+button:hover{
+    background-color: var(--primary-color);
+}
+.socials{
+    display: flex;
+align-items: center;
+gap:2rem;
+margin-left:1rem ;
+}
+
+socials a{
+    display: inline-flex;
+    padding:9px 10px;
+    font-display:1.2rem;
+    color: var(--white);
+    border:1px solid var(--primary-color);
+    border-radius:1000%;
+
+}
+.socials a:hover{
+    color:var(--primary-color);
+    background-color: var(--white);
+    border-color: var(--white);
+}
+@media(width>540px){
+    .header__container h1 span:nth-child(1){
+        font-size:8rem;
+        line-height: 7.5rem;
+    }
+}
+
+@media(width>768px){
+    nav{
+        position:static;
+        padding:2rem 1rem;
+        max-width:var(--max-width);
+        margin-inline:auto;
+        display:flex;
+        align-items: fflex-start;
+        gap:3rem;
+    }
+
+    .nav__header{
+        width:fit-content;
+        padding:0;
+        background-color: transparent;
+    }
+    .nav__logo a img{
+        max-width:120px;
+
+    }
+    .nav__menu__btn{
+    
+    position: absolute;
+    top: 40px;
+    right: 30px;
+    font-size: 28px;
+    cursor: pointer;
+}
+    }
+
+    .nav__links{
+        position:static;
+        width:fit-content;
+        padding:0px;
+        flex-direction:row;
+        gap:3rem;
+        background-color: transparent;
+        transform: none !important;
+    }
+    .nav__links a:hover{
+       color:var(--primary-color);
+    }
+.header__container h1 span:nth-child(1){
+    font-size: 10rem;
+    line-height: 9rem;
+}
+
+
+.video-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 15rem;
+}
+
+.video-container video {
+    width: 80%;
+    max-width: 900px;
+    border-radius: 10px;
+    
+}
+body {
+    background-color: black;
+    margin: 9;
+    padding: 0;
+}
+.legal {
+    background-color: #000;
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid gray;
+}
+
+.legal a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 14px;
+}
+
+.legal a:hover {
+    color: red;
+}
+
+ .payments {
+    background-color: #000;
+    text-align: center;
+    padding-bottom: 30px;
+    color: white;
+}
+
+.payments span {
+    margin: 10px;
+    font-weight: bold;
+}
+
+.payments span:hover {
+    color: red;
+    cursor: pointer;
+} .payments {
+    background-color: #000;
+    text-align: center;
+    padding: 30px 0;
+    color: white;
+}
+
+.payment-icons {
+    display: flex;
+    justify-content: center;   /* Center horizontally */
+    align-items: center;
+    gap: 20px;                 /* Space between logos */
+    margin-top: 15px;
+}
+
+.payment-icons img {
+    width: 50px;              /* Small size */
+    height: auto;
+    transition: 0.3s;
+}
+
+.payment-icons img:hover {
+    transform: scale(1.1);    /* Little zoom on hover */
+}
+.payment-icons img {
+    width: 45px;
+    opacity: 0.8;
+}
+
+.payment-icons img:hover {
+    opacity: 1;
+}
+
+
+
+@media (max-width: 768px) {
+    .payment-icons {
+        flex-wrap: wrap;
+    }
+
+    .payment-icons img {
+        width: 40px;
+    }
+}
